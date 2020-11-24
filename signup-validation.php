@@ -1,23 +1,34 @@
 <?php
 /**
  * Insert a new user into the database.
- *
- * We do not check if the username is already registered.
- * We do not encrypt the password.
  */
 session_start();
-include 'functions.php';
+require 'App/Autoloader.php';
+App\Autoloader::register();
+$db = new App\database('projetm3206');
 
-$dbh = db_connection();
-$sth = $dbh->prepare('INSERT INTO users(login, pass) VALUES(:login, :pass)');
-$data = array(
-	'login'  => $_POST['login'],
-	'pass' => $_POST['password']
-);
-$sth->execute($data);
-$sth->closeCursor();
 
-$_SESSION['login'] = true;
+$log=htmlspecialchars($_POST['login']);
+$pass=htmlspecialchars($_POST['password']);
+$PassCrypt=password_hash($pass, PASSWORD_DEFAULT);
 
-header('Location: index.php');
+$testId=$db->IsExist(array($log));
+
+if ($testId === 0) {
+	$sth = $db->insert('INSERT INTO users(login, pass) VALUES(:login, :pass)',array('login'  => $log,'pass' => $PassCrypt));
+	$_SESSION['login'] = $sth;
+}else{
+	echo "Ce nom d'utilisateur existe déjà, veuillez en trouver un nouveau";
+	echo '<a href="index.php">Cliquez ici pour retourner à l\'accueil</a>';
+}
+
+
+
+
+
+
+
+
+
+header('Location: signup.php');
 ?>

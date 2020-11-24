@@ -3,18 +3,14 @@
  * Insert an event into the database.
  */
 session_start();
-include 'functions.php';
+require 'App/Autoloader.php';
+App\Autoloader::register();
 
-$dbh = db_connection();
-$sth = $dbh->prepare('INSERT INTO events(user, title, description, date) 
-                      VALUES(:user, :title, :description, :date)');
-$data = array(
-	'user'  => $_SESSION['login'],
-	'title' => $_POST['title'],
-	'description' => $_POST['description'],
-	'date' => $_POST['date'],
-);
-$sth->execute($data);
-$sth->closeCursor();
+$db = new App\database('projetm3206');
+$sth = $db->insert('INSERT INTO events(user, title, description, date) VALUES(:user, :title, :description, :date)',array('user'  => $_SESSION['login'],'title' => $_POST['title'],'description' => $_POST['description'],'date' => $_POST['date']));
+
+
+
 header('Location: index.php');
 ?>
+
