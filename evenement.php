@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <title>Les Sables Du Temps - S'inscrire</title>
+  <title>Les Sables Du Temps - évènement</title>
   <meta charset="utf-8">
   <link rel="icon" type="image/png" href="img/favicon.png">
 
@@ -16,50 +16,84 @@
 
     <div class="row imagefond">
       <div class="col-12">
+
         <div class="row">
-          <div class="col">
-            <nav class="nav navigation justify-content-center" >
-             <a class="nav-item mr-2" href="index.php">Accueil</a> | 
-             <a class="nav-item  mr-2 ml-2" href="login.php">Se connecter</a> |
-             <a class="nav-item active ml-2" href="signup.php">S'inscrire</a>
-           </nav>
+          <div class="col-2"> 
+            <nav>
+              <div class="decovs">
+                <a class="nav-item" href="index.php"> <b> Évènements </b> </a> 
+              </div>
+            </div>
+
+            <div class="col-2 offset-6 offset-md-8">
+              <div class="deco">
+                <a class="nav-item" href="logout.php"> <b> Déconnexion </b> </a>
+              </div>
+            </div>
+
+          </div>
+
+
+          <div class="row">
+            <div class="col">
+              <div class="nav navigation justify-content-center" >
+
+               |<a class="active nav-item mr-2 ml-2" href="evenement.php">Calculer le temps</a> |
+
+             </div>
+           </div>
          </div>
-       </div>
+       </nav>
+
 
        <div class="row justify-content-center"> 
         <div class=" col-8 col-md-7 col-lg-4 form">
           <div class="row justify-content-center">
-            <div class="col-6 connexion"><p> S'inscrire </p></div> 
+            <div class="col-6 connexion"><p> Créer un nouvel évènement </p></div> 
           </div>
           
-          
-          <form class="row justify-content-center" method="post" action="signup-validation.php">
-            
+
+          <form class="row justify-content-center" method="post" action="insert.php">
+
             <div class="col-12 col-md-6 text-center">
 
-              <label for="username">Pseudo :</label>
+              <label for="username">Titre de l'évènement* :</label>
 
               <div class="rentrer2">
-                <input class ="InputStyle" id="username"type="text" name="login" maxlength="10" required>
+                <input class ="InputStyle" id="evenement"type="text" name="title" maxlength="50" required>
               </div>
             </div>
-            
 
 
-            
+
+
             <div class="col-12 col-md-6  text-center">
 
-              <label for="password">Mot de passe :</label>
+              <label for="password">Date*</label>
 
               <div class="rentrer2">
-                <input class ="InputStyle"id="password" type="password" name="password" maxlength="10" required>  
+                <input class ="InputStyle"id="date" type="date" name="date" required>  
               </div>    
             </div>
+
+            <div class="col-12 col-md-6  text-center">
+
+              <label for="username">Description:</label>
+
+              <div class="rentrer2">
+                <input class ="InputStyle"id="username" type="text" maxlength="280" name="description">
+              </div>    
+            </div>
+
+
+
+
+
             <div class="col-12 col-md-6 mr-md-3">
               <div class="row justify-content-center">
-                <div class="col-6 col-md-12 ml-2 ml-lg-0 mt-3">
+                <div class="col-6 mr-md-4 mr-0 mr-lg-0 col-md-12 ml-2 ml-lg-4 mt-3">
                   <div class="conexbouton">
-                    <input class="InputStyleSub"id="submit" type="submit" value="S'inscrire">
+                    <input class="InputStyleSub"id="submit" type="submit" value="Valider">
                   </div>
                 </div>
               </div>
@@ -68,6 +102,8 @@
           
         </div>
       </div>
+
+
     </div>
   </div>
 

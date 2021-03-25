@@ -2,8 +2,6 @@
 /**
  * Check if the user is registered in the database
  *
- * We do not check if the username exists in the database.
- * We do not check if the username exists in the database, but the password is wrong.
  */
 session_start();
 require 'App/Autoloader.php';
@@ -14,7 +12,7 @@ $Pass=htmlspecialchars($_POST['password']);
 $Bad=0;
 
 
-$db = new App\database('projetm3206');
+$db = new App\Database('projetm3206');
 $Check=$db->IsExist(array($Login));
 
 if ($Check === 0) {
@@ -22,7 +20,7 @@ if ($Check === 0) {
 }elseif($Check === 1){
 	$PassCheck= $db->PassCheck($Login,$Pass);
 	if ($PassCheck === true) {
-		$data=$db->prepare('SELECT id FROM users WHERE login = ?',$Login,'App/database','true');
+		$data=$db->prepare('SELECT id FROM utilisateurs WHERE login = :login',array( 'login' => $Login),'App/database','true');
 		
 		$_SESSION['login']=$data['id'];
 		header('location:index.php');
@@ -31,8 +29,6 @@ if ($Check === 0) {
 		$Bad=2;
 	}
 }
-
-var_dump($Check);
 
 
 ?>

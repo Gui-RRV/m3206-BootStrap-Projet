@@ -1,69 +1,412 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
-
 *{
-	padding: 0;
-	margin:0;
-	border:0;
-	font-family: 'Poppins', sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
-
-.container-fluid{
-	height: 100vh;
+body {
+  margin: 0;
 }
 
-.titre{
-	border-radius: 100px;
-	border: 2px solid #C28B7C;
-	background-color:#C28B7C;
-	color:#6e8894;
-	width: 20%;
+/*style de la barre et du texte sur l'index*/
+.texte{
+  color: #85979D;
+  margin-top: 25%;
+  font-size: 20px;
+  margin-left: 5%;
+}
+.barre{
+  background-color: #85979D;
+  margin-top: 1%;
+  height: 5px;
+}
+/*fin style de la barre et du texte sur l'index*/
+
+/*style evenement*/
+.deco{ 
+  margin-top: 5%;
+  font-size: 20px;}
+
+.decovs{
+  margin-top: 5%;
+  font-size: 20px;
+  margin-left: 20%;
+}
+
+.form2{  
+  margin-top: 4%;
+  padding-left: 2%;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  background-color: #D2BCB6;
+  border-radius: 50px;
+  height: 160%;
+ }
+
+.valider{margin-left: 11%;}
+
+.description{
+  margin-left: 12%;
+  color: #85979D;
+  margin-top: 5%;
+  font-size: 20px;}
+
+.champ{
+  font-size: 15px;
+  color: #85979D;
+  margin-left:13%;
+  margin-top: 2%;}
+
+.entrer{margin-left: 10%;}
+
+.date{
+  margin-left: 25%;
+  color: #85979D;
+   margin-top: 5%;
+  font-size: 20px;}
+
+.evenement{
+  margin-left: -10%;
+  
+  margin-top: 5%;
+  font-size: 30px;}
+/*style evenement*/
+
+/*style login & signup*/
+.conex{
+  margin-left: 4%;
+  margin-top: 3%;}
+
+.conexbouton{
+  margin-left: 4%;
+  margin-top: 3%;
+}
+
+.oui2{
+ /* margin-left: 12%;*/
+  color: #85979D;
+  margin-top: 2%;
+  font-size: 15px;}
+
+.pseu{
+  margin-left: 10%;
+  color: #85979D;
+  margin-top: 2%;
+  font-size: 15px;}
+
+.connexion{
+  color: #85979D;
+  font-size: x-large;
+  text-align: center;}
+
+/*style login & signup*/
+.event_list::-webkit-scrollbar{
+  display: none;
+}
+
+.event_list{
+	margin-top: 4%;
+ 	padding-left: 2%;
+ 	padding-top: 1%;
+ padding-bottom: 5%;
+  background-color: #D2BCB6;
+  border-radius: 50px;
+  height: 500px;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.wrap{
+	overflow-x: hidden;
+  overflow-y:scroll;
+}
+
+.centre{
 	text-align: center;
-	font-size: 3.5em	;
-	padding-top: 3%;
-	padding-bottom: 1%;
+  margin-bottom: 5%;
+  color:#85979D ;
+}
+.accueil{height: 100vh;}
+
+.site-footer {
+  background-color: rgba(231,215,193,50);
+  height: 10vh;
 }
 
-.top-buffer{
-	margin-top: 35%;
-}
+.login{height: 90vh;}
 
-.col-6{
-	padding: 0;
-}
-.fond{
-	background-color: #e7d7c1;
-}
 
-.image{
-	height: 100vh;
-}
+
+.top-buffer{margin-top: 20%;}
+
+.col-6{padding: 0;}
+
+.fond{background-color: #e7d7c1;}
+
+.image{height: 100vh;}
+
 .img-fluid{
-	height:100%;
-	width: 100%;
+  height:100%;
+  width: 100%;
 }
 
-a {
+a {color: #85979D;}
+
+.active {
+  color: #C28B7C ;
+}
+
+.con{
+
+color: #C28B7C;
+margin-right: 2%;
+margin-left: 2%;
+}
+
+.ins{
+margin-right: 2%;
+margin-left: 2%;
+}
+
+.navigation{
+  color: #85979D;
+  margin-top: 2%;
+  font-size: x-large;
+}
+
+.imagefond{
+  background-image: url('img/plage.jpg');
+  background-size: cover;
+  height: 100%;
+}
+
+.form{
+  margin-top: 4%;
+  padding-left: 2%;
+  padding-top: 1%;
+  padding-bottom: 5%;
+  background-color: #D2BCB6;
+  border-radius: 50px;
+  height: 160%;
+}
+.titre{
+  border-radius: 100px;
+  border: 2px solid #C28B7C;
+  background-color:#C28B7C;
+
+ 
+  text-align: center;
+  font-size:3.5em;
+  padding-top: 3%;
+  padding-bottom: 1%;
+}
+
+.Para_Titre{
+  color:rgb(231,215,193);
+  line-height: 90%;
+}
+p{
+  color: #85979D;
+
+  text-align: center;
+}
+
+label{
+  color: #85979D;
+  margin-top: 2%;
+  font-size: 15px;
+}
+
+#submit{
+  margin-left: 30%;
+}
+
+
+
+/*Style de l'accordeon pour afficher les évents*/
+.btn{
+color:#C28B7C;
+}
+
+.bordure{
+  border: solid #5B676B 1px ;
+  border-top: none;
+}
+
+.card{
+  background-color: #E7D7C1;
+  color:#85979D;
+}
+/*Style du modal de voyance*/
+.modal-content{
+  background-color: #D2BCB6;
+}
+
+.modal-title{
   color: #85979D;
 }
 
-.active {
-  color: #C28B7C;
+.btn-primary:hover{
+  background-color: #85979D;
+  border: solid #85979D 0.5px;
 }
 
-nav{
-	color: #85979D;
-	margin-top: 2%;
-	font-size: x-large;
-	
+.btn-primary:focus{
+  background-color: #85979D;
+  border: solid #85979D 0.5px;
+}
+.btn-success:hover{
+  background-color: #B5A998;
+  border: solid #B5A998 0.5px;
+}
+.btn-success:focus{
+  background-color: #B5A998;
+  border: solid #B5A998 0.5px;
+}
+.btn-success{
+  background-color: #E7D7C1;
+  border: solid #E7D7C1 0.5px;
+}
+
+
+/*Fin Style du modal de voyance*/
+
+.badge-secondary{
+  background-color: #85979D;
+}
+
+  .delete-buffer{margin-top:60%;}
+  #delete{color:#D98680;}
+/*fin style accordeon/affichage event*/
+
+.InputStyle{
+  border:solid #85979D 1px;
+  background-color: white;
+  border-radius: 10px;
+width: 70%;
+}
+
+.InputStyleSub{
+  border:solid #85979D 1px;
+  background-color: white;
+  border-radius: 10px;
+
 }
 
 
 @media screen and (max-width: 992px) {
-	.fond{
-	background-image: url('img/large.jpg');
-	height: 100vh;
-  	background-size: cover;
 
-	}
+input{
+  width: 94%;
+}
+
+#submit {
+    margin-left: 4%;
+}
+
+
+
+
+  /*evenement responsive*/
+.valider{margin-left: 20%;}
+.description{margin-left: 23%;}
+.champ{margin-left:25%;}
+.entrer{margin-left: 23%;}
+.date{margin-left: 30%;}
+.evenement{margin-left: 7%;}
+.deco{margin-left: -23%;}
+/*evenement responsive*/
+
+/*reponsive login & signup*/
+.conex{margin-left: 10%;}
+.conexbouton{margin-left: 10%;}
+.form{margin-top: 10%;}
+/*style login & signup*/
+
+
+  /*style de la barre et du texte sur l'index*/
+.texte{
+ color: #CC6345;
+  margin-top: 10%;
+
+}
+
+.barre{
+  background-color: #CC6345;
+
+}
+
+/*fin style de la barre et du texte sur l'index*/
+  .fond{
+  background-image: url('img/large.jpg');
+  height: 100vh;
+    background-size: cover;
+
+  }
+  .imagefond{
+  background-image: url('img/large.jpg');
+  background-size: cover;
+  height: 100%;
+}
+
+.form{
+  margin-top: 3%;
+  padding-top: 2%;
+}
+
+.delete-buffer{
+  margin-top: 20%;
+}
+
+}
+
+@media screen and (max-width: 767px) {
+
+  /*evenement responsive*/
+  Permet de placer chaques 
+.valider{margin-left: 10%;}
+.description{margin-left: 13%;}
+.champ{margin-left:17%;}
+.entrer{margin-left: 12%;}
+.date{margin-left: 24%;}
+.evenement{margin-left: -7%;}
+.deco{margin-left: -100%;}
+.decovs{margin-left: 10%;
+      margin-bottom: 20%;}
+/*evenement responsive*/
+
+/*reponsive login & signup*/
+.conex{margin-left: 5%;}
+.conexbouton{margin-left: 1%;}
+.form{margin-top: 10%; 
+    height: 420px;}
+/*style login & signup*/
+
+  /*style de la barre et du texte sur l'index*/
+.texte{
+  color: #CC6345;
+
+}
+.barre{
+  background-color: #CC6345;
+
+}
+/*fin style de la barre et du texte sur l'index*/
+  .top-buffer{margin-top:20%;}
+
+
+  .titre{
+    font-size: 2.5em;
+  }
+
+  .bordure{
+  border: solid #5B676B 1px ;
+
+}
+
+#submit{
+  margin-left: auto;
+}
+.navigation{
+  font-size: medium;
+}
 }
